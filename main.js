@@ -6,11 +6,11 @@ function init() {
 }
 
 async function populateLangs() {
-    const lang_url = "/api/v2/langs"; //language url
+    const lang_url = "/api/v2/langs"; //language url //todo: it better to keep the base url in a scope variable or pass it into the function since it'll be easier to change if needed.
     const response = await fetch(lang_url);
     const data = await response.json();
-    const $supportedLanguagesDropDown = document.querySelector("#supported-langs");
-    let option;
+    const $supportedLanguagesDropDown = document.querySelector("#supported-langs"); //todo: you do a lot of queries for thie element. we only need to do it once. same goes for most other elements in your page
+    let option;//todo: should be inside the loop
     for (let key in data) {
         option = document.createElement('option');
         option.value = key;
