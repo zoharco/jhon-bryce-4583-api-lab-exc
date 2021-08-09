@@ -1,46 +1,74 @@
+#dictionary {
+    width: 60%;
+    margin: auto;
+}
 #dict-container {
-    display: inline-block;
+  display: inline-block;
+  width: 100%;
 }
 
 .definition-container {
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
 }
 
 .definition::before {
-    content: "Definition: ";
+  content: "Definition: ";
 
-    font-style: normal;
-    font-weight: bold;
+  font-style: normal;
+  font-weight: bold;
 }
+.partOfSpeech::before {
+  content: "Part of speech: ";
 
+  font-style: normal;
+  font-weight: bold;
+}
 .definition {
-    margin-right: 64px;
+  margin-right: 64px;
 }
 
-.example{
-    font-style: oblique;
+.example {
+  font-style: oblique;
 }
 
 .example::before {
-    content: "Example: ";
-    font-style: normal;
-    font-weight: bold;
+  content: "Example: ";
+  font-style: normal;
+  font-weight: bold;
 }
 
 ol.synonyms::before {
-    content: "Synonyms";
-    margin-left: -40px;
-    font-style: normal;
-    font-weight: bold;
+  content: "Synonyms";
+  margin-left: -40px;
+  font-style: normal;
+  font-weight: bold;
 }
 
-audio{
-    transform: scale(0.5);
-    filter: drop-shadow(2px 3px 3px #333);
+ul.antonyms::before {
+  content: "Antonyms";
+  margin-left: -40px;
+  font-style: normal;
+  font-weight: bold;
 }
 
-.word{
-    margin-right: 10px;
+audio {
+  transform: scale(0.5);
+  filter: drop-shadow(2px 3px 3px #333);
+}
+
+.word {
+  margin-right: 10px;
+}
+
+.noResult .title {
+  margin: 20px 0 10px;
+  color:red;
+}
+.noResult .message {
+  margin:0;
+}
+.noResult .resolution {
+  margin:0;
 }
